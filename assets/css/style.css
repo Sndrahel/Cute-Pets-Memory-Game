@@ -7,6 +7,7 @@
 }
 
 body {
+    height: 100vh;
     font-family: 'Patrick Hand', cursive, 'Open Sans', sans-serif;
     background-color: aqua;
   /*  background-image: ;
