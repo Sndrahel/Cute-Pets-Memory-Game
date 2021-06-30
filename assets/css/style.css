@@ -3,5 +3,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Patrick Hand', cursive, 'Open Sans', sans-serif;
+    background-color: aqua;
+  /*  background-image: ;
+    background-attachment: fixed;
+    background-size: cover; */
 }
