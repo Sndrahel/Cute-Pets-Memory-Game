@@ -15,7 +15,7 @@ body {
     background-size: cover; */
 }
 
-.card-container {
+.card-deck {
   display: grid;
   background-color: blue;
   margin: 5px 0 10px;
