@@ -10,19 +10,4 @@ body {
     height: 100vh;
     font-family: 'Patrick Hand', cursive, 'Open Sans', sans-serif;
     background-color: aqua;
-  /*  background-image: ;
-    background-attachment: fixed;
-    background-size: cover; */
-}
-
-.card-deck {
-  display: grid;
-  background-color: blue;
-  margin: 5px 0 10px;
-  grid-template-columns: repeat(4, auto);
-/*  width: 100%;  
-  height: 90vh; */
-  justify-content: center;
-  perspective: 1000px;
- /* align-items: center; */
-}
+  }
