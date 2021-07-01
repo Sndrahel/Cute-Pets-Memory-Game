@@ -14,32 +14,128 @@
     <title>Memory Game</title>
 </head>
 <body>
-        <header class="header">
-            <h1 class="page-title">Memory Game</h1>
+
+    <header class="header">
+        <h1 class="page-title">Memory Game</h1>
             
-            <div class="audio-control">
-                <i class="fas fa-volume-up show" id="volume-up"></i>
-                <i class="fas fa-volume-mute" id="volume-mute"></i>
+        <div class="audio-control">
+            <i class="fas fa-volume-up show" id="volume-up"></i>
+            <i class="fas fa-volume-mute" id="volume-mute"></i>
+        </div>
+    </header>
+
+    <!--Game area-->
+
+    <section class="score-area">
+
+            <div>
+                <h3 class="moves-header">Moves: <span class="moves-counter">0</span></h3>
             </div>
-        </header>
-
-        <section class="score-panel">
-
-            <h3 class="moves moves-header">Moves: <span class="moves-counter">0</span></h3>
 
             <div class="timer-container">
                 <h3 class="timer"><i class="far fa-clock"></i> <span class="timer-header">Time:</span> 00:00</h3>
             </div>
 
-            <div class="reset">
-                <button class="btn reset-btn">Reset <i class="fa fa-repeat"></i></button>
-            </div>
-        </section>
+    </section>
+
+    <section class="game-area">
+
+        <div class="memory-card" data-image="pic1">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic1">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic2">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic2">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic3">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic3">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic4">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic4">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic5">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic5">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic6">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic6">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic7">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic7">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+        
+        <div class="memory-card" data-image="pic8">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+        <div class="memory-card" data-image="pic8">
+            <img class="card-front" src="#" alt="#">
+            <img class="card-back" src="#" alt="Card Back">
+        </div>
+
+
+    </section>
+
+
+    <!-- Game Reset and Modal Btn-->
+        <div class="level-btn">
+            <button class="btn reset-btn" reset-btn onclick="reset()">Reset <i class="fa fa-repeat"></i></button>
+            <button class="btn modal-btn">How to Play</button>
+        </div>
+    </section>
 
   
 
-<script src="assets/js/script.js"></script>  
-<!--Font awesome script-->
-<script src="https://kit.fontawesome.com/72ab4e86da.js" crossorigin="anonymous"></script>  
+    <script src="assets/js/script.js"></script>  
+    <!--Font awesome script-->
+    <script src="https://kit.fontawesome.com/72ab4e86da.js" crossorigin="anonymous"></script>  
+
 </body>
 </html>
