@@ -30,7 +30,33 @@ body {
     justify-content: center;
     perspective: 1000px; */
 }
-/*
+
+/* ---- Header ---- */
+
+header {
+    grid-area: header;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    font-size: 2em;
+    /*
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative; */
+}
+
+.header {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.audio-control {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    transform: scale(1.4);
+}
+
 .score-area {
     display: grid;
     grid-template-rows: 1fr;
@@ -40,33 +66,38 @@ body {
     justify-items: center;
     align-items: center;
     padding: 20px;
-} */
+} 
 
-/* ---- Header ---- */
-
-header {
-    grid-area: header;
-    margin: 15px 0;
-    letter-spacing: 2px;
-    /*
-    height: 10vh;
-    width: 100%;
-    margin: 0 auto;
-    position: relative; */
+.moves {
+    grid-area: moves;
 }
 
-/*
-.page-title {
-    color: black;
-    font-weight: normal;
-    text-align: center;
-    font-size: 40px;
-    letter-spacing: 2px;
-} */
+.moves-header {
+    font-size: 1rem;
+}
 
-.audio-control {
-    position: absolute;
-    top: 15px;
-    right: 40px;
-    transform: scale(1.4);
+.timer {
+    grid-area: timer;
+}
+
+.card-deck {
+    grid-area: card-deck;
+    background: linear-gradient(to bottom, #88ebb3, #04b536);
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "card card card card"
+    "card card card card"
+    "card card card card"
+    "card card card card";
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 60%;
+    grid-gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73,0.5);
 }
