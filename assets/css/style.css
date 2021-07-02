@@ -116,7 +116,7 @@ header {
 }
 
 .btn {
-    display: inline-block;
+ /*   display: inline-block; */
     color: black;
     border: 1px solid #88ebb3;
     padding: 12px 34px;
@@ -127,4 +127,18 @@ header {
     cursor: pointer;
     border-radius: 10px;
     transition: 1s;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    color: white;
+    background: wheat;
+    transition: 1s;
+}
+
+.btn-area {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px 40px;
 }
