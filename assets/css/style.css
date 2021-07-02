@@ -142,3 +142,17 @@ header {
    align-items: center;
    padding: 20px 40px;
 }
+
+/* Win Messege Modal */
+
+.modal {
+    display: table; /*none*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(46, 61, 73,0.5);
+
+}
