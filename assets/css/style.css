@@ -118,7 +118,7 @@ header {
 .btn {
  /*   display: inline-block; */
     color: black;
-    border: 1px solid #88ebb3;
+    border: 1px solid #55bb81;
     padding: 12px 34px;
     font-family: 'Open sans', sans-serif;
     font-size: 15px;
@@ -154,5 +154,18 @@ header {
     height: 100%;
     z-index: 99;
     background-color: rgba(46, 61, 73,0.5);
+}
 
+.modal-content {
+    font-family: 'Open sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 20px auto;
+    border: 0.7em solid #55bb81;
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
 }
