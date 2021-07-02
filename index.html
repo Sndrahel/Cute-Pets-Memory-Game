@@ -159,28 +159,23 @@
     <!-- Game Reset and Modal Btn-->
         <section class="btn-area">
             <div>
-                <button class="btn reset-btn" reset-btn onclick="reset()">Reset <i class="fa fa-repeat"></i></button>
-                <button class="btn modal-btn">How to Play</button>
+                <button class="btn reset-btn">Reset <i class="fa fa-repeat"></i></button>
+                <button class="btn modal-btn">How to Play <i class="fas fa-info-circle"></i></button>
             </div>
         </section>
    
 
     <!-- Instructions Modal -->
-        <section>
-            <div>
-                <h2 class="instruction-header"></h2>
-            </div>
-            <div class="card-rules">
-                <div class="body-rules">
-                    <ol class="list-rules">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ol>
-                    <span id="btn play-btn">Play Game!</span>
+        <section class="instructions-outer">
+            <div class="instructions-inner">
+                <h2>How To Play</h2>
+                    <img src="assets/images/cardback.jpg" alt="image of a cat playing">
+                        <p>Find all pairs of matching card as quickly as possible.</p>
+                        <p>Click on a card to flip it over.</p>
+                        <p>Only two cards at a time can be flipped.</p>
+                        <p>To start the game, click on the Play button below.</p>
+                    <span class="btn" id="play-btn">Play Game!</span>
                 </div>
-            </div>
         </section>
 
     <!-- Win Messege Modal-->
