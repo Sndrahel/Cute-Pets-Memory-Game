@@ -31,31 +31,34 @@ header {
       text-align: center;
   }
 
-  .audio-control {
-    position: absolute;
-    top: 15px;
-    right: 40px;
-    transform: scale(1);
-}
+
 
 .score-area {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: 1fr;
- /*   grid-template-areas: "moves-counter timer"; */
-    width: 70%;
+    width: 40%;
     justify-items: center;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
+    margin: 0 auto;
 } 
+/*
+.audio-control {
+    position: absolute;
+    top: 15px;
+    right: 40px; 
+    transform: scale(1);
+    right: 40px; 
+} */
 
 
 .game-area {
     display: grid;
     margin: 0 auto;
-    grid-template-columns: repeat(4, auto);
+  /*  grid-template-columns: repeat(4, auto); */
     justify-content: center;
-    grid-gap: 5px;
+  /*  grid-gap: 5px; */
     perspective: 1000px;
 }
 
@@ -70,7 +73,7 @@ header {
     justify-items: center;
     height: 100%;
     width: 100%;
-    grid-gap: 15px;
+    grid-gap: 10px;
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73,0.5);
