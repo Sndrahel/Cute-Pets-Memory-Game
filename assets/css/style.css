@@ -144,14 +144,21 @@ header {
 
 .instructions-outer,
 .modal-outer {
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 99;
+   /* z-index: 99; */
     background-color: rgba(46, 61, 73, 0.5);
+}
+.instructions-outer {
+    z-index: 99;
+}
+
+.modal-outer{
+    z-index: 9;
 }
 
 .instructions-inner,
@@ -188,7 +195,7 @@ header {
 
 /* --- Media Queries --- */
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
 
 .header {
     font-size: 20px;
@@ -196,6 +203,11 @@ header {
 
 .score-area {
     width: 100%;
+    margin-top: 20px;
+}
+
+.audio-control {
+    transform: scale(0.7);
 }
 
 .card-deck {
@@ -227,9 +239,39 @@ header {
      padding: 10px;
      border-radius: 50px;
      font-size: 0;
+     margin: 0 10px;
      
  }
  .fa, .fas {
      font-size: 25px;
  }
+
+ .instructions-inner,
+ .modal-inner {
+     width: 100%;
+     height: 90%;
+ }
+
+ .instructions-inner {
+     margin-top: 50px;
+ }
+ 
+ .instructions-inner h2,
+ .modal-inner h2 {
+     margin: 20px 0;
+ }
+ 
+ .instructions-inner p,
+ .modal-inner p {
+     margin: 5px 0;
+ }
+ 
+ #play-btn,
+ #play-again-btn {
+     display: block;
+     margin: 20px auto;
+ }
+
 }
+
+
