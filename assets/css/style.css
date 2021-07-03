@@ -19,19 +19,16 @@ header {
     /*  margin: 15px 0; */
       letter-spacing: 2px;
       font-size: 2em;
-      /*
-      height: 10vh;
+     /* height: 100px;*/
       width: 100%;
       margin: 0 auto;
-      position: relative; */
-  }
+      position: relative; 
+}
   
-  .header {
-      margin-top: 10px;
+.header {
+     /* margin-top: 10px; */
       text-align: center;
   }
-
-
 
 .score-area {
     display: grid;
@@ -63,7 +60,6 @@ header {
 }
 
 .card-deck {
-    grid-area: card-deck;
     background: linear-gradient(to bottom, #88ebb3, #04b536);
     border-radius: 1.5rem;
     display: grid;
@@ -116,7 +112,6 @@ header {
 }
 
 .btn {
- /*   display: inline-block; */
     color: black;
     border: 1px solid #55bb81;
     padding: 12px 34px;
@@ -143,13 +138,13 @@ header {
    padding: 20px 40px;
 }
 
-/* Pop UP - How to play / Modal information */
+/* --- Pop UP - How to play / Modal information --- */
 
 /* Content below / styling adapted from https://github.com/motazabdou/MS2-MemoryGame/blob/master/style.css */
 
 .instructions-outer,
 .modal-outer {
-    display: table;
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -189,4 +184,52 @@ header {
 #play-again-btn {
     display: block;
     margin: 20px auto;
+}
+
+/* --- Media Queries --- */
+
+@media only screen and (max-width: 600px) {
+
+.header {
+    font-size: 20px;
+}
+
+.score-area {
+    width: 100%;
+}
+
+.card-deck {
+    grid-gap: 2px;
+    padding: 10px;
+}
+
+.card {
+    width: 70px;
+    height: 70px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-front, 
+.card-back {
+    padding: 3px;
+}
+
+.btn-area {
+    padding: 20px 0;
+ }
+
+ .reset-btn,
+ .modal-btn {
+     padding: 10px;
+     border-radius: 50px;
+     font-size: 0;
+     
+ }
+ .fa, .fas {
+     font-size: 25px;
+ }
 }
