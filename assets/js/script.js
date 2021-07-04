@@ -1,3 +1,7 @@
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
 function showInstructions() {
 
 }
@@ -11,7 +15,7 @@ function shuffle(arr) {
 }
 
 function flipCard() {
-
+    this.classList.add('flip');
 }
 
 function checkCardMatch() {
