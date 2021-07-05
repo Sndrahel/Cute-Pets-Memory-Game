@@ -1,9 +1,13 @@
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
+    const timeContainer = document.querySelector('.timer');
 
+    let gameOn = false;
     let flippedCard = false; //Checks if card has been clicked
     let lockBoard = false; // Keep the board locked until first pair of cards are flipped back - if no match
     let firstCard, secondCard; // Checks if cards match
+    let moves = 0;
+
 
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
@@ -31,10 +35,12 @@ function closeInstructions() {
     instructions.style.display = "none";
 }
 
- // Click function for cards 
- // Click, Flip and ResetBoard function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/  */
+// Click function for cards 
+// Click, Flip, ResetBoard and Shuffle function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 
 function flipCard() {
+   // if timer(); 
+
     if (lockBoard) return;
     if (this === firstCard) return;
 
@@ -93,6 +99,28 @@ function addMove() {
     movesCounter.innerHTML = moves;
 }
 
+// Timer
+    let time;
+    let minutes = 0;
+    let seconds = 0;
+    let timeStart = false;
+    timeContainer.innerHTML = '${minutes} Mins ${seconds} Secs';
+
+    function timer() {
+        time = setInterval(function() {
+            seconds++;
+            if (seconds === 60) {
+                minutes++;
+                seconds = 0;
+            }
+            timeContainer.innerHTML = '${minutes} Mins ${seconds} Secs';
+        }, 1000);
+}
+
+function finishTime() {
+    clearInterval(time);
+} 
+
 // Cards are reset after each round
 function resetBoard() {
     [flippedCard, lockBoard] = [false, false];
@@ -105,29 +133,22 @@ function shuffle() {
       card.style.order = randomPos;
     });
   }
-
-function timer() {
-
+  
+function winGame() {
+    finishTime();
+    winMessage();
 }
 
-// Create a function that stops the timer once all 16 cards are matched.
-function finishTime() {
-
+// Win game message
+function winMessage() {
+    modal-outer
 }
- 
+
 function reset() {
 
 }
 
-function winGame() {
-
-}
-
-function winModal() {
-
-}
-
-/* ---- Audio Buttons ---- */
+// Audio Buttons
 // Function for audio inspired and taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js
 
 audio.addEventListener('click', () => {    
