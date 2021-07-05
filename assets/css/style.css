@@ -239,8 +239,8 @@ header {
     padding: 20px 0;
  }
 
- .reset-btn,
- .modal-btn {
+ #reset-btn,
+ #modal-btn {
      padding: 10px;
      border-radius: 50px;
      font-size: 0;

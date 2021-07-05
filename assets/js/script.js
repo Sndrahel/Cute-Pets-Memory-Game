@@ -1,6 +1,9 @@
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
+    const instructions = document.getElementById('instructions');
     const timeContainer = document.querySelector('.timer');
+    const modalBtn = document.getElementById('modal-btn');
+    const playBtn = document.getElementById('play-btn');
 
     let gameOn = false;
     let flippedCard = false; //Checks if card has been clicked
@@ -25,6 +28,9 @@
 // Events
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
+
+modalBtn.addEventListener('click', showInstructions); // listen for open click of how to play instructions modal
+playBtn.addEventListener('click', closeInstructions); // listen for open click of how to play instructions modal
 
 
 function showInstructions() {
