@@ -39,7 +39,10 @@ function closeInstructions() {
 // Click, Flip, ResetBoard and Shuffle function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 
 function flipCard() {
-   // if timer(); 
+    if (!gameOn) {
+        gameOn = true;
+        timer();
+    } 
 
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -104,7 +107,7 @@ function addMove() {
     let minutes = 0;
     let seconds = 0;
     let timeStart = false;
-    timeContainer.innerHTML = '${minutes} Mins ${seconds} Secs';
+    timeContainer.innerHTML = `${minutes} Minutes ${seconds} Seconds`;
 
     function timer() {
         time = setInterval(function() {
@@ -113,7 +116,7 @@ function addMove() {
                 minutes++;
                 seconds = 0;
             }
-            timeContainer.innerHTML = '${minutes} Mins ${seconds} Secs';
+            timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
         }, 1000);
 }
 
