@@ -1,8 +1,9 @@
-const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.card');
+    const movesCounter = document.querySelector('.moves-counter');
 
-    let flippedCard = false; //checks if card has been clicked
-    let lockBoard = false;
-    let firstCard, secondCard;
+    let flippedCard = false; //Checks if card has been clicked
+    let lockBoard = false; // Keep the board locked until first pair of cards are flipped back - if no match
+    let firstCard, secondCard; // Checks if cards match
 
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
@@ -30,7 +31,8 @@ function closeInstructions() {
     instructions.style.display = "none";
 }
 
- // Click function for cards, add flip class for css effects code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/  
+ // Click function for cards 
+ // Click, Flip and ResetBoard function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/  */
 
 function flipCard() {
     if (lockBoard) return;
@@ -67,7 +69,6 @@ function matchPair() {
     resetBoard();  
 }
 
-// board are locked until cards flip back - if no match
 function noMatch() {
     lockBoard = true;
 
@@ -78,9 +79,21 @@ function noMatch() {
 
         resetBoard();
       }, 800);
+
+      addMove();
 }
 
-//cards are reset after each round
+// Moves Counter
+// Moves Counter and Timer taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+    moves = 0;
+    movesCounter.innerHTML = 0;
+
+function addMove() {
+    moves++;
+    movesCounter.innerHTML = moves;
+}
+
+// Cards are reset after each round
 function resetBoard() {
     [flippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -92,10 +105,6 @@ function shuffle() {
       card.style.order = randomPos;
     });
   }
-
-function movesCounter() {
-
-}
 
 function timer() {
 
