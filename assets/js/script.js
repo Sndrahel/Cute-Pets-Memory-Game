@@ -47,7 +47,7 @@ function closeInstructions() {
 }
 
 // Click function for cards 
-// Cards: Click, Flip, ResetBoard and Shuffle function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/ 
+// Cards: Click and Flip function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 
 function flipCard() {
     if (!gameOn) {
@@ -61,26 +61,32 @@ function flipCard() {
     this.classList.add('flip');
     flipSound.play();
 
-        // first card click
-    if(!flippedCard) {  
+        
+    if(!flippedCard) {  // First card clicked
+
         flippedCard = true;
-        firstCard = this;
+        firstCard = this; // Stores this as the first card
 
         return;
     }
-        // second click
-        secondCard = this; 
+        
+        secondCard = this; // Second card clicked
+
         checkIfCardMatch();
 }
 
-function checkIfCardMatch() { // Checks if cards match
+// Checks if firstCard and secondCard match
+// Card match function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
+ 
+function checkIfCardMatch() { 
 
     let isMatch = firstCard.dataset.flipper === secondCard.dataset.flipper;
         isMatch ? matchPair() : noMatch();
         
 }
 
-function matchPair() { // 
+// Cards will be disabled for clicks once they are matched
+function matchPair() { 
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -89,7 +95,8 @@ function matchPair() { //
     resetBoard();  
 }
 
-function noMatch() { // Keeps board locked and flips card back if no match 
+// Keeps board locked and flips card back if no match 
+function noMatch() { 
     lockBoard = true;
 
     setTimeout(() => {
@@ -120,6 +127,8 @@ function addMove() {
     let timeStart = false;
     timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
 
+
+// Timer function is called the first time the firstCard is clicked
     function timer() {
         time = setInterval(function() {
             seconds++;
@@ -136,6 +145,7 @@ function finishTime() {
 } 
 
 // Cards are reset after each round
+// Cards: ResetBoard and Shuffle function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 function resetBoard() {
     [flippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -160,10 +170,26 @@ function winMessage() {
     // Shows total moves and total time on win modal
     document.getElementById('final-move').innerHTML = moves;
     document.getElementById('total-time').innerHTML = totalTime;
-    reset();
+    resetGame ();
 }
 
-function reset() {
+function resetGame() {
+    setTimeout() => {
+        finishTime();
+        gameOn = false;
+        timeStart = false;
+        seconds = 0;
+        minutes = 0;
+        timeContainer.innerHTML = `<h3 class="timer-header">Time: <span class="timer">00:00</span></h3>`;
+        moves = 0;
+        movesCounter.innerHTML = 0;
+        flippedCard = false;
+        [firstCard, secondCard] = [null, null]; 
+        cards.forEach(cardReset => cardReset.classList.remove('flip'));
+        shuffle();
+        cards.forEach(card => card.addEventListener('click', flipCard));
+    }, 500);
+
 
 }
 
