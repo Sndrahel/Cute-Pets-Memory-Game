@@ -4,18 +4,19 @@
     const timeContainer = document.querySelector('.timer');
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
+    const winModal = document.getElementById('win-modal');
 
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
     const matchSound = document.getElementById('matchSound');
-    const victorySound = document.getElementById('VictorySound');
+    const winSound = document.getElementById('winSound');
     const flipSound = document.getElementById('flipSound');
-    const cardSounds = [noMatchSound, matchSound, victorySound, flipSound];
+    const cardSounds = [noMatchSound, matchSound, winSound, flipSound];
 
 // Audio buttons 
     const soundButton = document.getElementById('volume-up');
     const muteButton = document.getElementById('volume-mute');
-    const audio = document.getElementById('audio-container');
+    const audio = document.getElementById('audio-control');
     let soundOn = true;
 
     let gameOn = false;
@@ -24,8 +25,6 @@
     let firstCard, secondCard; // Checks if cards match
     let moves = 0;
     let totalTime = "";
-
-
 
 
 // Events
@@ -82,12 +81,12 @@ function flipCard() {
 function checkIfCardMatch() { 
 
     let isMatch = firstCard.dataset.flipper === secondCard.dataset.flipper;
-        isMatch ? matchPair() : noMatch();
+        isMatch ? disableCard() : noMatch();
         
 }
 
 // Cards will be disabled for clicks once they are matched
-function matchPair() { 
+function disableCard() { 
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -145,6 +144,7 @@ function finishTime() {
     clearInterval(time);
 } 
 
+
 // Cards are reset after each round
 // Cards: ResetBoard and Shuffle function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 function resetBoard() {
@@ -172,6 +172,7 @@ function winMessage() {
 
 // Resets game and starts a new game
 function startGame() {
+    setTimeout(() => {
         finishTime();
         gameOn = false;
         timeStart = false;
@@ -185,6 +186,7 @@ function startGame() {
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
         shuffle();
         cards.forEach(card => card.addEventListener('click', flipCard))
+    }, 500);
 
 }
 
