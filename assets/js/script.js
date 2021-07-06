@@ -1,7 +1,7 @@
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
     const instructions = document.getElementById('instructions');
-    const winModal = document.getElementById('modal-outer');
+    const winModal = document.getElementById('win-modal');
     const timeContainer = document.querySelector('.timer');
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
@@ -11,6 +11,7 @@
     let lockBoard = false; // Keep the board locked until first pair of cards are flipped back - if no match
     let firstCard, secondCard; // Checks if cards match
     let moves = 0;
+    let totalTime = "";
 
 
 // Sound effects 
@@ -155,10 +156,10 @@ function winGame() {
 // Win game message
 function winMessage() {
     winModal.style.display = "block";
-    finalTime = timeContainer.innerHTML;
+    totalTime = timeContainer.innerHTML;
     // Shows total moves and total time on win modal
     document.getElementById('final-move').innerHTML = moves;
-    document.getElementById('final-time').innerHTML = finalTime;
+    document.getElementById('total-time').innerHTML = totalTime;
     reset();
 }
 
