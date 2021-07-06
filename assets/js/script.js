@@ -161,14 +161,24 @@ function shuffle() {
 
 function winGame() {
     finishTime();
-    winMessage();
+    winModal();
 }
 
 // Win game message
-function winMessage() {
+function winModal() {
+    winModal.style.display ="block";
+    totalTime = timeContainer.innerHTML;
+    document.getElementById("total-time").innerHTML = totalTime;
+    document.getElementById("final-move").innerHTML = finalMove;
     
     startGame();
 } 
+
+window.onclick = function(event) {
+    if (event.target.id == 'close') {
+        document.getElementById("win-modal").style.display = "none"
+    }
+}; 
 
 // Resets game and starts a new game
 function startGame() {
