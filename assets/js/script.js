@@ -5,14 +5,6 @@
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
 
-    let gameOn = false;
-    let flippedCard = false; //Checks if card has been clicked
-    let lockBoard = false; // Keep the board locked until first pair of cards are flipped back - if no match
-    let firstCard, secondCard; // Checks if cards match
-    let moves = 0;
-    let totalTime = "";
-
-
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
     const matchSound = document.getElementById('matchSound');
@@ -25,6 +17,16 @@
     const muteButton = document.getElementById('volume-mute');
     const audio = document.getElementById('audio-container');
     let soundOn = true;
+
+    let gameOn = false;
+    let flippedCard = false; //Checks if card has been clicked
+    let lockBoard = false; // Keep the board locked until first pair of cards are flipped back - if no match
+    let firstCard, secondCard; // Checks if cards match
+    let moves = 0;
+    let totalTime = "";
+
+
+
 
 // Events
 cards.forEach(card => card.addEventListener('click', flipCard));
@@ -165,7 +167,7 @@ function winGame() {
 // Win game message
 function winMessage() {
     
-    StartGame();
+    startGame();
 } 
 
 // Resets game and starts a new game
