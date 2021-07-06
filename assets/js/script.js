@@ -1,6 +1,7 @@
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
     const instructions = document.getElementById('instructions');
+    const winModal = document.getElementById('modal-outer');
     const timeContainer = document.querySelector('.timer');
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
@@ -29,6 +30,9 @@
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
+// Button fuction
+// Button function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+
 modalBtn.addEventListener('click', showInstructions); // listen for open click of how to play instructions modal
 playBtn.addEventListener('click', closeInstructions); // listen for open click of how to play instructions modal
 
@@ -42,7 +46,7 @@ function closeInstructions() {
 }
 
 // Click function for cards 
-// Click, Flip, ResetBoard and Shuffle function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/ 
+// Cards: Click, Flip, ResetBoard and Shuffle function code taken form https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 
 function flipCard() {
     if (!gameOn) {
@@ -68,14 +72,14 @@ function flipCard() {
         checkIfCardMatch();
 }
 
-function checkIfCardMatch() {
+function checkIfCardMatch() { // Checks if cards match
 
     let isMatch = firstCard.dataset.flipper === secondCard.dataset.flipper;
         isMatch ? matchPair() : noMatch();
         
 }
 
-function matchPair() {
+function matchPair() { // 
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -84,7 +88,7 @@ function matchPair() {
     resetBoard();  
 }
 
-function noMatch() {
+function noMatch() { // Keeps board locked and flips card back if no match 
     lockBoard = true;
 
     setTimeout(() => {
@@ -98,7 +102,7 @@ function noMatch() {
       addMove();
 }
 
-// Moves Counter
+// Moves Counter count moves when firstcard is clicked
 // Moves Counter and Timer taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
     moves = 0;
     movesCounter.innerHTML = 0;
@@ -113,7 +117,7 @@ function addMove() {
     let minutes = 0;
     let seconds = 0;
     let timeStart = false;
-    timeContainer.innerHTML = `${minutes} Minutes ${seconds} Seconds`;
+    timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
 
     function timer() {
         time = setInterval(function() {
@@ -150,7 +154,12 @@ function winGame() {
 
 // Win game message
 function winMessage() {
-    modal-outer
+    winModal.style.display = "block";
+    finalTime = timeContainer.innerHTML;
+    // Shows total moves and total time on win modal
+    document.getElementById('final-move').innerHTML = moves;
+    document.getElementById('final-time').innerHTML = finalTime;
+    reset();
 }
 
 function reset() {
