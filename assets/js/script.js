@@ -5,7 +5,6 @@
     const timeContainer = document.querySelector('.timer');
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
-    const resetBtn = document.getElementById('reset-btn');
 
     let gameOn = false;
     let flippedCard = false; //Checks if card has been clicked
@@ -171,24 +170,17 @@ function winMessage() {
     // Shows total moves and total time on win modal
     document.getElementById('final-move').innerHTML = moves;
     document.getElementById('total-time').innerHTML = totalTime;
-    resetGame();
+    StartGame();
 }
 
-// when the user clicks the (x) To close modal
-window.onclick = function(event) {
-    if (event.target.id == 'close') {
-        document.getElementById('win-modal').style.display = "none";
-    }
-};
 
-
-function resetGame() {
+function startGame() {
         finishTime();
         gameOn = false;
         timeStart = false;
         seconds = 0;
         minutes = 0;
-        timeContainer.innerHTML = `<h3 class="timer-header">Time: <span class="timer">00:00</span></h3>`;
+        timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
         moves = 0;
         movesCounter.innerHTML = 0;
         flippedCard = false;
