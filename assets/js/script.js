@@ -1,7 +1,6 @@
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
     const instructions = document.getElementById('instructions');
-    const winModal = document.getElementById('win-modal');
     const timeContainer = document.querySelector('.timer');
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
@@ -157,7 +156,7 @@ function shuffle() {
       card.style.order = randomPos;
     });
   }
-  
+
 function winGame() {
     finishTime();
     winMessage();
@@ -165,15 +164,11 @@ function winGame() {
 
 // Win game message
 function winMessage() {
-    winModal.style.display = "block";
-    totalTime = timeContainer.innerHTML;
-    // Shows total moves and total time on win modal
-    document.getElementById('final-move').innerHTML = moves;
-    document.getElementById('total-time').innerHTML = totalTime;
+    
     StartGame();
-}
+} 
 
-
+// Resets game and starts a new game
 function startGame() {
         finishTime();
         gameOn = false;
