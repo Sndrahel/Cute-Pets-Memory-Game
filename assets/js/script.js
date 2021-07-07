@@ -34,8 +34,8 @@
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
-// Button fuction
-// Button function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+
+// Game Buttons. (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
 
 modalBtn.addEventListener('click', showInstructions); // listen for open click of how to play instructions modal
 playBtn.addEventListener('click', closeInstructions); // listen for open click of how to play instructions modal
@@ -49,8 +49,8 @@ function closeInstructions() {
     instructions.style.display = "none";
 }
 
-// Click function for cards 
-// Cards: Click and Flip function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
+
+// Click and Flip function for cards. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/) 
 
 function flipCard() {
     if (!gameOn) {
@@ -78,13 +78,13 @@ function flipCard() {
         checkIfCardMatch();
 }
 
-// Checks if firstCard and secondCard match
-// Card match function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/  
+// Checks if cards match. (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+
 function checkIfCardMatch() { 
 
     let isMatch = firstCard.dataset.flipper === secondCard.dataset.flipper;
         if (isMatch) perfectMatch += 1;
-     //   isMatch ? disableCard() : noMatch();
+
         if (isMatch) disableCard();
         else noMatch();
 
@@ -92,6 +92,7 @@ function checkIfCardMatch() {
 }
 
 // Cards will be disabled for clicks once they are matched
+
 function disableCard() {  
 
     firstCard.removeEventListener('click', flipCard);
@@ -102,10 +103,12 @@ function disableCard() {
 }
 
 // Keeps board locked and flips card back if no match 
+
 function noMatch() {
     lockBoard = true;
 
-    // Used to keep the cards visible for a short time
+// Used to keep the cards visible for a short time
+
     setTimeout(() => { 
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
@@ -117,8 +120,9 @@ function noMatch() {
       addMove();
 }
 
-// Moves Counter count moves when firstcard is clicked
-// Moves Counter and Timer taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+
+// Moves Counter and Timer. (Function adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+
     moves = 0;
     movesCounter.innerHTML = 0;
 
@@ -136,6 +140,7 @@ function addMove() {
 
 
 // Timer function is called the first time the firstCard is clicked
+
     function timer() {
         time = setInterval(function() {
             seconds++;
@@ -151,20 +156,21 @@ function finishTime() {
     clearInterval(time);
 } 
 
-// Cards are reset after each round
-// Cards: ResetBoard and Shuffle function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
+// Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
+
 function resetBoard() {
 
     [flippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
+// Win game Pop Up message. (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+
 function winGame() {
     finishTime();
     winMessage();
 }
 
-// Win game message
 function winMessage() {
     winModal.style.display ="block";
     totalTime = timeContainer.innerHTML;
@@ -182,6 +188,8 @@ window.onclick = function(event) {
 }; 
 
 
+// Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
+
 function shuffle() {
     cards.forEach(card => {
       let randomPos = Math.floor(Math.random() * 16);
@@ -191,6 +199,7 @@ function shuffle() {
 
 
 // Resets game and starts a new game
+
 function startGame() {
     setTimeout(() => {
         finishTime();
@@ -207,11 +216,10 @@ function startGame() {
         shuffle();
         cards.forEach(card => card.addEventListener('click', flipCard))
     }, 500);
-
 }
 
-// Audio Buttons
-// Function for audio inspired and taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js
+
+// Audio Buttons. (Function for audio taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js)
 
 audio.addEventListener('click', () => {    
     soundButton.classList.toggle('show');
