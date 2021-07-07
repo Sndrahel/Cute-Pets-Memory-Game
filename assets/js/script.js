@@ -7,6 +7,7 @@
 
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
+    const playAgainBtn = document.getElementById('play-again-btn')
     
 
 // Sound effects 
@@ -39,7 +40,6 @@ shuffle();
 
 modalBtn.addEventListener('click', showInstructions); // listen for open click of how to play instructions modal
 playBtn.addEventListener('click', closeInstructions); // listen for open click of how to play instructions modal
-
 
 function showInstructions() {
     instructions.style.display = "block";
@@ -187,6 +187,10 @@ window.onclick = function(event) {
     }
 }; 
 
+playAgainBtn.addEventListener('click', function() {
+    modal.style.display = "none";
+    startGame();
+});
 
 // Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
 
