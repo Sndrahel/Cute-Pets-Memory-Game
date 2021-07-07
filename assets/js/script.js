@@ -1,14 +1,18 @@
+// Variable Declaration
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
     const instructions = document.getElementById('instructions');
     const timeContainer = document.querySelector('.timer');
     const MAX_MATCH = 8;
     const winModal = document.getElementById('win-modal');
-
+// Play buttons
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
-    const playAgainBtn = document.getElementById('play-again-btn')
-    
+    const playAgainBtn = document.getElementById('play-again-btn');
+
+// Audio buttons 
+    const muteBtn = document.getElementById('mute-btn');
+    const audio = document.getElementById('audio-control');
 
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
@@ -16,12 +20,7 @@
     const winSound = document.getElementById('winSound');
     const flipSound = document.getElementById('flipSound');
     const cardSounds = ["noMatchSound", "matchSound", "winSound", "flipSound"];
-
-// Audio buttons 
-    const muteBtn = document.getElementById('mute-btn');
-    const audio = document.getElementById('audio-control');
-    let soundOn = true;
-
+    
     let gameOn = false;
     let perfectMatch = 0;
     let flippedCard = false; //Checks if card has been clicked
@@ -29,29 +28,35 @@
     let firstCard, secondCard; // Checks if cards match
     let moves = 0;
     let totalTime = "";
+    let soundOn = true;
 
-
+function init() {
 // Events
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
+// Moves Counter and Timer. (Function adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+moves = 0;
+movesCounter.innerHTML = 0;
 
 // Game Buttons. (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+modalBtn.addEventListener('click', () => { 
+    toggleInstructions('block');
+}); // listen for open click of how to play instructions modal
+playBtn.addEventListener('click', () => { 
+    toggleInstructions('none');
+}); // listen for click to close how to play instructions modal
 
-modalBtn.addEventListener('click', showInstructions); // listen for open click of how to play instructions modal
-playBtn.addEventListener('click', closeInstructions); // listen for open click of how to play instructions modal
 
-function showInstructions() {
-    instructions.style.display = "block";
 }
 
-function closeInstructions() {
-    instructions.style.display = "none";
-}
+init();
 
+function toggleInstructions(withValue) {
+    instructions.style.display = withValue;
+}
 
 // Click and Flip function for cards. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/) 
-
 function flipCard() {
     if (!gameOn) {
         gameOn = true;
@@ -119,12 +124,6 @@ function noMatch() {
 
       addMove();
 }
-
-
-// Moves Counter and Timer. (Function adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
-
-    moves = 0;
-    movesCounter.innerHTML = 0;
 
 function addMove() {
     moves++;
