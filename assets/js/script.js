@@ -2,24 +2,27 @@
     const movesCounter = document.querySelector('.moves-counter');
     const instructions = document.getElementById('instructions');
     const timeContainer = document.querySelector('.timer');
+    const MAX_MATCH = 8;
+    const winModal = document.getElementById('win-modal');
+
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
-    const winModal = document.getElementById('win-modal');
+    
 
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
     const matchSound = document.getElementById('matchSound');
     const winSound = document.getElementById('winSound');
     const flipSound = document.getElementById('flipSound');
-    const cardSounds = [noMatchSound, matchSound, winSound, flipSound];
+    const cardSounds = ["noMatchSound", "matchSound", "winSound", "flipSound"];
 
 // Audio buttons 
-    const soundButton = document.getElementById('volume-up');
-    const muteButton = document.getElementById('volume-mute');
+    const muteBtn = document.getElementById('mute-btn');
     const audio = document.getElementById('audio-control');
     let soundOn = true;
 
     let gameOn = false;
+    let perfectMatch = 0;
     let flippedCard = false; //Checks if card has been clicked
     let lockBoard = false; // Keep the board locked until first pair of cards are flipped back - if no match
     let firstCard, secondCard; // Checks if cards match
@@ -76,17 +79,20 @@ function flipCard() {
 }
 
 // Checks if firstCard and secondCard match
-// Card match function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
- 
+// Card match function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/  
 function checkIfCardMatch() { 
 
     let isMatch = firstCard.dataset.flipper === secondCard.dataset.flipper;
-        isMatch ? disableCard() : noMatch();
-        
+        if (isMatch) perfectMatch += 1;
+     //   isMatch ? disableCard() : noMatch();
+        if (isMatch) disableCard();
+        else noMatch();
+
+        if (perfectMatch === MAX_MATCH) winGame();
 }
 
 // Cards will be disabled for clicks once they are matched
-function disableCard() { 
+function disableCard() {  
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -96,10 +102,11 @@ function disableCard() {
 }
 
 // Keeps board locked and flips card back if no match 
-function noMatch() { 
+function noMatch() {
     lockBoard = true;
 
-    setTimeout(() => {
+    // Used to keep the cards visible for a short time
+    setTimeout(() => { 
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         noMatchSound.play();
@@ -144,33 +151,27 @@ function finishTime() {
     clearInterval(time);
 } 
 
-
 // Cards are reset after each round
 // Cards: ResetBoard and Shuffle function code taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/ 
 function resetBoard() {
+
     [flippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
-function shuffle() {
-    cards.forEach(card => {
-      let randomPos = Math.floor(Math.random() * 12);
-      card.style.order = randomPos;
-    });
-  }
-
 function winGame() {
     finishTime();
-    winModal();
+    winMessage();
 }
 
 // Win game message
-function winModal() {
+function winMessage() {
     winModal.style.display ="block";
     totalTime = timeContainer.innerHTML;
+    document.getElementById("final-move").innerHTML = moves;
     document.getElementById("total-time").innerHTML = totalTime;
-    document.getElementById("final-move").innerHTML = finalMove;
-    
+    winSound.play();
+
     startGame();
 } 
 
@@ -179,6 +180,15 @@ window.onclick = function(event) {
         document.getElementById("win-modal").style.display = "none"
     }
 }; 
+
+
+function shuffle() {
+    cards.forEach(card => {
+      let randomPos = Math.floor(Math.random() * 16);
+      card.style.order = randomPos;
+    });
+  }
+
 
 // Resets game and starts a new game
 function startGame() {
