@@ -208,8 +208,9 @@ header {
     margin-top: 20px;
 }
 
-.audio-control {
-    transform: scale(0.7);
+#mute-btn {
+    transform: scale(1);
+    padding: 5px;
 }
 
 .card-deck {
