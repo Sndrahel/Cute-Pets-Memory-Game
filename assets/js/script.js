@@ -57,6 +57,10 @@ playBtn.addEventListener('click', () => {
     toggleInstructions('none');
 }); // listen for click to close how to play instructions modal
 
+playAgainBtn.addEventListener('click', function() {
+    resetGame();
+});
+
 
 // Audio Buttons. (Function for audio taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js)
 audio.addEventListener('click', () => {    
@@ -203,12 +207,6 @@ window.onclick = function(event) {
         document.getElementById("win-modal").style.display = "none"
     }
 }; 
-
-
-playAgainBtn.addEventListener('click', function() {
-    modal.style.display = "none";
-    resetGame();
-});
 
 
 // Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
