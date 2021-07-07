@@ -9,7 +9,7 @@
 // Play buttons
     const modalBtn = document.getElementById('modal-btn');
     const playBtn = document.getElementById('play-btn');
-    const playAgainBtn = document.getElementById('play-again-btn');
+    const playAgainBtn = document.getElementById('play-again-btn'); //not working
 
 // Audio buttons 
     const muteBtn = document.getElementById('mute-btn');
@@ -20,6 +20,7 @@
     const matchSound = document.getElementById('matchSound');
     const winSound = document.getElementById('winSound');
     const flipSound = document.getElementById('flipSound');
+    const shuffleSound = document.getElementById('shuffleSound');
     const cardSounds = ["noMatchSound", "matchSound", "winSound", "flipSound"];
     
     let gameOn = false;
@@ -233,6 +234,7 @@ function resetGame() {
         [firstCard, secondCard] = [null, null]; 
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
         shuffle();
+        shuffleSound.play();
         cards.forEach(card => card.addEventListener('click', flipCard))
     }, 400);
 }
