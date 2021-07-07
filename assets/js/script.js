@@ -194,7 +194,7 @@ function winMessage() {
     document.getElementById("total-time").innerHTML = totalTime;
     winSound.play();
 
-    startGame();
+    resetGame();
 } 
 
 
@@ -207,7 +207,7 @@ window.onclick = function(event) {
 
 playAgainBtn.addEventListener('click', function() {
     modal.style.display = "none";
-    startGame();
+    resetGame();
 });
 
 
@@ -221,7 +221,7 @@ function shuffle() {
 
 
 // Resets game and starts a new game (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
-function startGame() {
+function resetGame() {
     setTimeout(() => {
         finishTime();
         gameOn = false;
@@ -236,7 +236,7 @@ function startGame() {
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
         shuffle();
         cards.forEach(card => card.addEventListener('click', flipCard))
-    }, 500);
+    }, 400);
 }
 
 
