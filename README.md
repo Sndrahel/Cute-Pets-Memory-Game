@@ -92,6 +92,7 @@ The images on the back
 
 ___
 ### Features Left to Implement:
+
 - Scoreboard that record the users score. 
 - More alternitiv to choose difficulty modes.
 
@@ -99,6 +100,7 @@ ___
 ----
 ## Technologies used:
 ---
+
 - HTML 5
 - CSS 3
 - JavaScript

@@ -228,7 +228,7 @@ function resetGame() {
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
         shuffle();
         shuffleSound.play();
-        cards.forEach(card => card.addEventListener('click', flipCard))
+        cards.forEach(card => card.addEventListener('click', flipCard));
     }, 400);
 }
 
