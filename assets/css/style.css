@@ -15,18 +15,14 @@ body {
 /* ---- Game Area ---- */
 
 header {
-    /*  grid-area: header; */
-    /*  margin: 15px 0; */
       letter-spacing: 2px;
       font-size: 2em;
-     /* height: 100px;*/
       width: 100%;
       margin: 0 auto;
       position: relative; 
 }
   
 .header {
-     /* margin-top: 10px; */
       text-align: center;
   }
 
@@ -44,9 +40,7 @@ header {
 .game-area {
     display: grid;
     margin: 0 auto;
-  /*  grid-template-columns: repeat(4, auto); */
     justify-content: center;
-  /*  grid-gap: 5px; */
     perspective: 1000px;
 }
 
@@ -78,7 +72,6 @@ header {
 }
 .card:active {
     transform: scale(.98);
-    transform: transform .2s;
 }
 
 .card.flip {
@@ -154,14 +147,6 @@ header {
     z-index: 99;
     background-color: rgba(46, 61, 73, 0.5);
 }
-/*
-.instructions-outer {
-    z-index: 9;
-}
-
-.modal-outer{
-    z-index: 99;
-} */
 
 .instructions-inner,
 .modal-inner {
@@ -245,6 +230,7 @@ header {
      margin: 0 10px;
      
  }
+
  .fa, .fas {
      font-size: 25px;
  }

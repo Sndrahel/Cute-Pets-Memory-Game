@@ -106,7 +106,7 @@ ___
 - JavaScript
 - [Balsamiq Wireframes](https://balsamiq.com/wireframes/) - For creating wireframes for initial visual development.
 - [FontAwesome](https://fontawesome.com/) - For icons.
-- [Google Fonts](https://fonts.google.com/) - To import the font-family used in this website: 
+- [Google Fonts](https://fonts.google.com/) - To import the font-family used in this website: Patrick Hand and Open Sans.
 - [GitHub](https://pages.github.com/) - Used to host respository.
 - [GitHub Pages](https://github.com/Sndrahel/Cute-Pets-Memory-Game/settings/pages) - Used to deploy this site.
 - [Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) - Used for testing code on various device sizes during deployment and debugging.
