@@ -111,6 +111,7 @@ ___
 - [GitHub Pages](https://github.com/Sndrahel/Cute-Pets-Memory-Game/settings/pages) - Used to deploy this site.
 - [Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) - Used for testing code on various device sizes during deployment and debugging.
 - [Am I responsive](http://ami.responsivedesign.is/#) - Was used to generate a mockup for this readme.
+- [Coolors](https://coolors.co/palettes/trending) - For styling the page.
 
 ---  
 ## Testing:
