@@ -44,16 +44,6 @@ This is a single page website that contains a simple memory game that contains 1
 #### Surface: 
 - Minimal interface.
 
-----
-## Technologies used:
----
-- HTML 5
-- CSS 3
-- JavaScript
-- [FontAwesome](https://fontawesome.com/) for icons.
-- [Google Fonts](https://fonts.google.com/)
-- [GitHub Pages](https://pages.github.com/) was used for deployment.
-- [Mockup screenshot generator](http://ami.responsivedesign.is/#) was used to generate a mockup for this readme.
 
 ---
 ## Features:
@@ -69,64 +59,85 @@ The layout is simple with a card deck on a plain background that allow the user 
 A score area is positioned above the deck and it contain a move counter, a timer and a mute button.
 Below the deck is a reset button and a information button of how to play the game.  
 
-#### Game Cards
-
-![Game Card]()
-
-Game cards is clickable, and turn on click.
-When there´s a match, cards will stay visible and be disabled from click.
-
 #### Score Area
 
 ![Score Area]()
 
 - Time counter:
 - Move counter:
+- Mute button:
 
 
-- Game over modal / Win modal: 
-- This section introduces the user to Back and Better with an eye catching animation to grab their attention.
+#### Game Deck and Cards
+
+![Game Deck]()
+
+Game cards is clickable, and turn on click.
+When there´s a match, cards will stay visible and be disabled from click.
+The images on the back
 
 
+#### Button Area
 
-__Home Intro Section__
+![Button Area]()
 
-- The home intro section is 
+- Reset Button:
+- How To Play Button: 
 
 
+### Game Over / Win Modal
+
+- Game over modal / 
+- Play Again Button: 
 
 ___
 ### Features Left to Implement:
 - Scoreboard that record the users score. 
 - More alternitiv difficulty modes.
 
+
+----
+## Technologies used:
+---
+- HTML 5
+- CSS 3
+- JavaScript
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) - For creating wireframes for initial visual development.
+- [FontAwesome](https://fontawesome.com/) - For icons.
+- [Google Fonts](https://fonts.google.com/) - To import the font-family used in this website: 
+- [GitHub](https://pages.github.com/) - Used to host respository.
+- [GitHub Pages](https://github.com/Sndrahel/Cute-Pets-Memory-Game/settings/pages) - Used to deploy this site.
+- [Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) - Used for testing code on various device sizes during deployment and debugging.
+- [Am I responsive](http://ami.responsivedesign.is/#) - Was used to generate a mockup for this readme.
+
 ---  
 ## Testing:
 ---
 
-- I ensured that all links directed to the correct pages and that certain links directed to specific sections of other pages.
-- I ensured that all links to external websites opened in a new tab
-- I tested the form validation and the submit button
-- I used the following desktop browsers for testing:
-  - Google Chrome
-  - Safari Browser
-- I tested the site on a Huawei P30 Pro with the following mobile browsers:
-  - Google Chrome
-  - Huawei Browser
-- I tested the site on a Ipad (5:th gen) with the following browsers:
-  - Safari Browser
-- I tested responsiveness with Google Chrome Developer Tools.
-- All browsers mentioned were updated to the latest version as of 22/06/2021.
-
 ### Validator Testing:
 
-- HTML
-  - [W3C HTML Validation Service](https://validator.w3.org/) No errors were returned.
-- CSS
-  - [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/) No errors were found.
+- HTML [W3C HTML Validation Service](https://validator.w3.org/).
+- CSS [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/).
 
-### Unfixed Bugs
-  
+### This project was tested with the following browsers: 
+---
+
+- Laptop MacOS Big Sur (ver 11.4):
+  - Google Chrome
+  - Safari Browser
+
+- Mobile device Huawei P30 Pro:
+  - Google Chrome
+  - Huawei Browser
+
+- Tablet Ipad (5:th gen):
+  - Safari Browser
+
+
+---
+### Unfixed Bugs:
+---
+
   
 ---
 ## Deployment
