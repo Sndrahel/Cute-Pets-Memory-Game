@@ -26,12 +26,10 @@
 
 #### - Skeleton 
 
-- [Desktop_Home_page](wireframes/home_desktop.png)
-- [Mobile_Home_page](wireframes/home_mobile.png)
-- [Desktop_About_page](wireframes/about_desktop.png)
-- [Mobile_About_page](wireframes/about_mobile.png)
-- [Desktop_Contact_page](wireframes/contact_desktop.png)
-- [Mobile_Contact_page](wireframes/contact_mobile.png)
+- [Desktop Wireframe](wireframes/desktop_wireframe.png)
+- [Mobile Wireframe](wireframes/mobile_wireframe.png)
+- [Tablet Wireframe](wireframes/tablet_wireframe.png)
+
 
 #### - Surface 
 
