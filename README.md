@@ -1,7 +1,8 @@
 # Cute Pets Memory Game
 
-
 This is a single page website that contains a simple memory game that contains 16 cards in 4x4 style grid.
+The game aims to entertain a user for a while as well as provide with a bit of memory improvment. The game has been designed for users of any age to play and enjoy.
+
 
 ![Responsive Mockup]()
 
@@ -24,15 +25,28 @@ This is a single page website that contains a simple memory game that contains 1
 ---
 
 #### Strategy: 
-- The game aims to entertain a user for a while as well as provide with a bit of memory improvment. The game has been designed for users of any age to play and enjoy.
+- 
 
 #### Scope:
-- The game should be easy to use, have a clear layout and a customer friendly and clean navigation. 
+- The game should be easy to use, have a clear layout and a customer friendly, clean and minimal navigation. 
+- The cards should be shuffled on load or restart.
+- The game should have a timer that counts the total time to find all pairs. 
+- The game should have a move counter that count the totalt amount of moves it takes to match all pairs.
+- The game should have a reset button that resets timer, moves and reshuffle the cards.
+- The game should contain information on how the game went and option to play the game again.
+
+
 
 #### Structures: 
-- Single page laypout.
-- simple, minimal UI for ease of use.
-
+- Single page laypout and a simple, minimal UI for ease of use.
+- Function that shuffle the cards when the game is loaded. 
+- A timer function that starts when the initial click is made and ends when the last pair of cards is matched.
+- A move function that counts moves. 
+- The game have a game over / win modal that pops up when the game is completed to congrat the user.
+- The win modal contains the stats of the game with total amount of moves and time. 
+- The win modal contains a option to play the game again.
+- A reset button is placed below the game deck and resets the game.
+- A How to Play button is placed below the game deck and pops up when clicked.   
 
 #### Skeleton: 
 
