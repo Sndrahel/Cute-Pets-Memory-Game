@@ -65,14 +65,16 @@ This is a single page website that contains a simple memory game that contains 1
 
 ![Game Page]()
 
-The layout is simple with a plain background to allow the user to focus on the game cards. The memory game contains 16 cards in 4x4 style grid.
+The layout is simple with a card deck on a plain background that allow the user to focus on the game cards. The card deck contains 16 cards in 4x4 style grid. The card deck has been styled with some shadow to provide a minor 3-D effect. 
+A score area is positioned above the deck and it contain a move counter, a timer and a mute button.
+Below the deck is a reset button and a information button of how to play the game.  
 
 #### Game Cards
 
 ![Game Card]()
 
 Game cards is clickable, and turn on click.
-- Game logic: When there´s a match, cards will stay visible and be disabled from click.
+When there´s a match, cards will stay visible and be disabled from click.
 
 #### Score Area
 
