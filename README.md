@@ -9,31 +9,34 @@
 ---
 ## User Stories:
 
-- I need to view the page on mobile devices.
-- I want to view information about sessions.
-- I want to view information about the instructors.
-- I will look for contact information and social media links.
-- I want to make contact or book a session. 
+- I want to be entertained by a simple and relaxing game.
+- I would like to play a game that improves my memory
+- I would like to see my results at the end of the game
+- I'd like to play the game which has a pleasant appearance to the eye.
+- I want to play a game that helps me concentrate.
+- I'd like to easy see features so that everything is understandable with just one look.
 
 ---
 ## Five Planes:
 
-#### - Strategy 
+#### Strategy: 
+- The game aims to entertain a user for a while as well as provide with a bit of memory improvment. The game has been designed for users of any age to play and enjoy.
 
-#### - Scope 
+#### Scope:
+- The game should be easy to use, have a clear layout and a customer friendly and clean navigation. 
 
-#### - Structures 
+#### Structures: 
 
-#### - Skeleton 
+#### Skeleton: 
 
 - [Desktop Wireframe](wireframes/desktop_wireframe.png)
 - [Mobile Wireframe](wireframes/mobile_wireframe.png)
 - [Tablet Wireframe](wireframes/tablet_wireframe.png)
 
 
-#### - Surface 
+#### Surface: 
 
----
+----
 ## Technologies used:
 - HTML 5
 - CSS 3
