@@ -9,7 +9,7 @@
 body {
     height: 100vh;
     font-family: 'Patrick Hand', cursive, 'Open Sans', sans-serif;
-    background-color: aqua;
+    background-color: #3bf4fb;
   }
 
 /* ---- Game Area ---- */
@@ -51,7 +51,7 @@ header {
 }
 
 .card-deck {
-    background: linear-gradient(to bottom, #88ebb3, #04b536);
+    background: linear-gradient(to bottom, #caff8a, #caff8a);
     border-radius: 1.5rem;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -94,7 +94,7 @@ header {
     width: 100%;
     height: 100%;
     padding: 5px;
-    background: cornflowerblue;
+    background: #826aed;
     border-radius: 12px;
     border-width: .2px;
     overflow: hidden;
@@ -108,11 +108,11 @@ header {
 
 .btn {
     color: black;
-    border: 1px solid #55bb81;
+    border: 1px solid black;
     padding: 12px 34px;
     font-family: 'Open sans', sans-serif;
     font-size: 15px;
-    background: #88ebb3;
+    background: #c879ff;
     position: relative;
     cursor: pointer;
     border-radius: 10px;
@@ -122,7 +122,7 @@ header {
 .btn:hover {
     border: 1px solid white;
     color: white;
-    background: wheat;
+    background: #ffb7ff;
     transition: 1s;
 }
 
@@ -134,7 +134,7 @@ header {
 }
 
 #mute-btn {
-    background-color:aqua;
+    background-color: #3bf4fb;
     border: none;
     transform: scale(1.4);
 }
