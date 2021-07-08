@@ -120,7 +120,7 @@ ___
 ### Validator Testing:
 
 - HTML [W3C HTML Validation Service](https://validator.w3.org/).
-- CSS [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/).
+- CSS [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/). No errors shown.
 
 ### This project was tested with the following browsers: 
 ---
