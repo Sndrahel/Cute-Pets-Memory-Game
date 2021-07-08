@@ -93,7 +93,7 @@ The images on the back
 ___
 ### Features Left to Implement:
 - Scoreboard that record the users score. 
-- More alternitiv difficulty modes.
+- More alternitiv to choose difficulty modes.
 
 
 ----
@@ -133,6 +133,12 @@ ___
 - Tablet Ipad (5:th gen):
   - Safari Browser
 
+#### With each device and browser the following steps were taken:
+- 
+-
+-
+-
+
 
 ---
 ### Unfixed Bugs:
@@ -162,18 +168,18 @@ To run this project locally:
 ## Credits
 ---
 
-#### Content
+#### Content:
 - The template and inspiration of this README.md is partly taken from:
 
 - The styling are through out inspired and taken from:
     
 
-
-#### Media
-- The Images on this website were taken from: 
-  
+#### Media:
+- The Images on this website were taken from:  
 
 - The icons were taken from [FontAwesome](https://fontawesome.com/)
+
+#### Audio:
  
 ---
 ## Acknowledgments
