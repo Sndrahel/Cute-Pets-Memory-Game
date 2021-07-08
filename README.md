@@ -1,23 +1,27 @@
 # Cute Pets Memory Game
 
+
+This is a single page website that contains a simple memory game that contains 16 cards in 4x4 style grid.
+
 ![Responsive Mockup]()
 
 [Link to website](https://sndrahel.github.io/Cute-Pets-Memory-Game/)
 
-[GitHub Repo](https://github.com/Sndrahel/Cute-Pets-Memory-Game.git)
 
 ---
 ## User Stories:
+---
 
 - I want to be entertained by a simple and relaxing game.
-- I would like to play a game that improves my memory
-- I would like to see my results at the end of the game
+- I would like to play a game that improves my memory.
+- I would like to see my results at the end of the game.
 - I'd like to play the game which has a pleasant appearance to the eye.
 - I want to play a game that helps me concentrate.
 - I'd like to easy see features so that everything is understandable with just one look.
 
 ---
 ## Five Planes:
+---
 
 #### Strategy: 
 - The game aims to entertain a user for a while as well as provide with a bit of memory improvment. The game has been designed for users of any age to play and enjoy.
@@ -26,6 +30,9 @@
 - The game should be easy to use, have a clear layout and a customer friendly and clean navigation. 
 
 #### Structures: 
+- Single page laypout.
+- simple, minimal UI for ease of use.
+
 
 #### Skeleton: 
 
@@ -35,9 +42,11 @@
 
 
 #### Surface: 
+- Minimal interface.
 
 ----
 ## Technologies used:
+---
 - HTML 5
 - CSS 3
 - JavaScript
@@ -48,60 +57,50 @@
 
 ---
 ## Features:
+---
 
 ### Existing Features:
 
-__Navigation Bar__
+#### Game Page
 
-- Featured on all three pages, the full responsive navigation bar is fixed and includes links to the Logo, Home page, About page and Contact page and is identical in each page to allow for easy navigation.
-- This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+![Game Page]()
 
-![Nav Bar](mockups/back_and_better_nav.png)
+The layout is simple with a plain background to allow the user to focus on the game cards. The memory game contains 16 cards in 4x4 style grid.
 
-__The landing page image__
+#### Game Cards
 
-- The landing page includes a photograph with text overlay to attend the user about a sustainable health. 
+![Game Card]()
+
+Game cards is clickable, and turn on click.
+- Game logic: When there´s a match, cards will stay visible and be disabled from click.
+
+#### Score Area
+
+![Score Area]()
+
+- Time counter:
+- Move counter:
+
+
+- Game over modal / Win modal: 
 - This section introduces the user to Back and Better with an eye catching animation to grab their attention.
 
-![Landing Page](mockups/back_and_better_landing.png)
+
 
 __Home Intro Section__
 
-- The home intro section is kept simple with a motivation quote to focus attention on the call to action button.
+- The home intro section is 
 
-![Home Intro](mockups/back_and_better_intro.png)
+
 
 ___
 ### Features Left to Implement:
-
-
----
-## Implementation and Process:
-- I started coding with a navbar and a background image for the home page (index file). I separated the body into three sections, the header, the content and then the footer. 
-- I added some introductory text on the home page.  
-- I added a session section in the home page.
-- I added social links to the footer.
-- I created two more files: about and contact and pasted the content from the index file. 
-
-After the initial planning session with my mentor I needed to: 
-- Start with my wireframes for tablet and mobile devices (rookie misstake not doing it ahead as well as the UX planning).
-- I added some introductory text on the about page.
-- I added a form to the contact page.
-- 1 added call to action buttons on the home page and on the about page.
-
-After my mid-project session with my mentor I had the following changes to implement:
-- Center align buttons and content.
-- Implement css variables to shorten organize multiple code values.
-
-After my end-of-project mentor session I had the following changes to implement:
-- Change id attributes to class attributes through out the pages.
-- Shorten the image names in the images folder.
-- Add aria-labels to the links on the pages.
-- Correct the responsive layout and media queries through out the pages. 
-
+- Scoreboard that record the users score. 
+- More alternitiv difficulty modes.
 
 ---  
 ## Testing:
+---
 
 - I ensured that all links directed to the correct pages and that certain links directed to specific sections of other pages.
 - I ensured that all links to external websites opened in a new tab
@@ -129,15 +128,26 @@ After my end-of-project mentor session I had the following changes to implement:
   
 ---
 ## Deployment
-The site was deployed to [GitHub pages](https://pages.github.com/). Using the following steps: 
-- Create a repository on GitHub and initialize it with a README.MD file
-- The root of your repository must contain an index.html file which will be the main page of your live GitHub Page.
-- Go to repository settings, scroll to GitHub Pages and select the master branch for your source.
-- Save the selection and when the page reloads the link to your live site will be in the GitHub Pages section. The link can take up to 1 hour to go live.
+---
+The site was deployed to GitHub pages using the following steps:
+
+- Navigate to the [GitHub Repository Pages](https://github.com/Sndrahel/Cute-Pets-Memory-Game). 
+- Go to the [Settings](https://github.com/Sndrahel/Cute-Pets-Memory-Game/settings) page and scroll down to the GitHub Page section.
+- Select the main branch and save.
+- After the page refreshes, the link to the live page will be in the GitHub Page section.
+
+To run this project locally:
+
+- Navigate to the [GitHub Repository Pages](https://github.com/Sndrahel/Cute-Pets-Memory-Game). 
+- Click on the code and copy the URL to clone with HTTPS.
+- In a terminal with git installed navigate to the directory where you want the repository to be cloned.
+- Run 'git clone' followed by the URL you copied:
+- ```git clone https://github.com/Sndrahel/Cute-Pets-Memory-Game.git```
 
   
 ---
 ## Credits
+---
 
 #### Content
 - The template and inspiration of this README.md is partly taken from:
