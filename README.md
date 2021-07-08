@@ -1,10 +1,9 @@
 # Cute Pets Memory Game
 
 This is a single page website that contains a simple memory game that contains 16 cards in 4x4 style grid.
-The game aims to entertain a user for a while as well as provide with a bit of memory improvment. The game has been designed for users of any age to play and enjoy.
 
 
-![Responsive Mockup]()
+![Responsive Mockup](assets/mockups/mockup.png)
 
 [Link to website](https://sndrahel.github.io/Cute-Pets-Memory-Game/)
 
@@ -25,7 +24,7 @@ The game aims to entertain a user for a while as well as provide with a bit of m
 ---
 
 #### Strategy: 
-- 
+- The game aims to entertain a user for a while as well as provide with a bit of memory improvment. The game has been designed for users of any age to play and enjoy.
 
 #### Scope:
 - The game should be easy to use, have a clear layout and a customer friendly, clean and minimal navigation. 
@@ -67,7 +66,7 @@ The game aims to entertain a user for a while as well as provide with a bit of m
 
 #### Game Page
 
-![Game Page]()
+![Game Page](assets/mockups/game_page.png)
 
 The layout is simple with a card deck on a plain background that allow the user to focus on the game cards. The card deck contains 16 cards in 4x4 style grid. The card deck has been styled with some shadow to provide a minor 3-D effect. 
 A score area is positioned above the deck and it contain a move counter, a timer and a mute button.
@@ -75,7 +74,7 @@ Below the deck is a reset button and a information button of how to play the gam
 
 #### Score Area
 
-![Score Area]()
+![Score Area](assets/mockups/score_area.png)
 
 - Time counter:
 - Move counter:
@@ -84,7 +83,7 @@ Below the deck is a reset button and a information button of how to play the gam
 
 #### Game Deck and Cards
 
-![Game Deck]()
+![Game Deck](assets/mockups/game_deck.png)
 
 Game cards is clickable, and turn on click.
 When there´s a match, cards will stay visible and be disabled from click.
@@ -93,21 +92,23 @@ The images on the back
 
 #### Button Area
 
-![Button Area]()
+![Button Area](assets/mockups/button_area.png)
 
-- Reset Button:
-- How To Play Button: 
+- Reset Button: Resets the game.
+- How To Play Button: Pops up when pushed and contains information on how to play the game.
 
 
 ### Game Over / Win Modal
 
-- Game over modal / 
-- Play Again Button: 
+![Win Modal](assets/mockups/win_modal.png)
+
+- Win modal: Pops up when game is completed
+- Play Again Button: Resets the game and restarts the game. 
 
 ___
 ### Features Left to Implement:
 
-- Scoreboard that record the users score. 
+- Scoreboard that records the users score. 
 - More alternitiv to choose difficulty modes.
 
 
@@ -197,6 +198,7 @@ To run this project locally:
 - The icons were taken from [FontAwesome](https://fontawesome.com/)
 
 #### Audio:
+[Freesound](https://freesound.org/) - 
  
 ---
 ## Acknowledgments
