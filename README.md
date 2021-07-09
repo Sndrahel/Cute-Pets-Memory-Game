@@ -98,6 +98,14 @@ The images on the back
 - How To Play Button: Pops up when pushed and contains information on how to play the game.
 
 
+#### How to play modal
+
+![How To Play](assets/mockups/how_to_play.png)
+
+- Reset Button: Resets the game.
+- How To Play Button: Pops up when pushed and contains information on how to play the game.
+
+
 ### Game Over / Win Modal
 
 ![Win Modal](assets/mockups/win_modal.png)

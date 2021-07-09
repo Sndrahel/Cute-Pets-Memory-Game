@@ -15,16 +15,16 @@ body {
 /* ---- Game Area ---- */
 
 header {
-      letter-spacing: 2px;
-      font-size: 2em;
-      width: 100%;
-      margin: 0 auto;
-      position: relative; 
+    letter-spacing: 2px;
+    font-size: 2em;
+    width: 100%;
+    margin: 0 auto;
+    position: relative; 
 }
   
 .header {
       text-align: center;
-  }
+}
 
 .score-area {
     display: grid;
@@ -97,7 +97,7 @@ header {
 
 .card-front {
     transform: rotateY(180deg);
-  }
+}
 
 .btn {
     color: black;
@@ -191,32 +191,17 @@ header {
 .header {
     font-size: 25px;
 }
-/*
-.card-deck {
-    grid-gap: 5px;
-    padding: 15px;
-}
-
-.card {
-    width: 100px;
-    height: 100px;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-} */
 
 .instructions-inner,
 .modal-inner {
-     width: 90%;
-     height: 80%;
-     margin-top: 70px;
+    width: 90%;
+    height: 80%;
+    margin-top: 70px;
  }
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
 
 .header {
     font-size: 15px;
@@ -267,7 +252,6 @@ header {
 .fa, .fas {
     font-size: 25px;
 }
-    
     
 .instructions-inner,
 .modal-inner {
