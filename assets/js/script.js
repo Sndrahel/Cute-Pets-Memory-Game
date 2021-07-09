@@ -5,6 +5,7 @@
     const timeContainer = document.querySelector('.timer');
     const MAX_MATCH = 8;
     const winModal = document.getElementById('win-modal');
+    const closeIcon = document.querySelector(".close-win-modal");
 
 // Play buttons
     const modalBtn = document.getElementById('modal-btn');
@@ -32,6 +33,8 @@
     let totalTime = "";
     let soundOn = true;
 
+    
+
 // Timer
     let time;
     let minutes = 0;
@@ -43,7 +46,6 @@ function init() {
 // Events
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
-
 
 // Moves Counter and Timer. (Function adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
 moves = 0;
@@ -71,12 +73,6 @@ audio.addEventListener('click', () => {
     });
 
 timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
-
-window.onclick = function(event) {
-    if (event.target.id == 'close') {
-        document.getElementById('win-modal').style.display = 'none';
-        }
-    };
 
 }
 
@@ -201,8 +197,17 @@ function winMessage() {
     document.getElementById("final-move").innerHTML = moves;
     document.getElementById("total-time").innerHTML = totalTime;
     winSound.play();
-    resetGame();
+
+    closeModal(); //resetGame
 } 
+
+function closeModal() {
+    closeIcon.addEventListener('click', function() {
+        winModal.style.display = "none";
+
+       resetGame();
+    });
+}
 
 // Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
 function shuffle() {
@@ -230,7 +235,9 @@ function resetGame() {
         shuffle();
         shuffleSound.play();
         cards.forEach(card => card.addEventListener('click', flipCard));
-    }, 700);
+        perfectMatch = 0;
+        soundOn = true; //Ny
+    }, 500);
 }
 
 
