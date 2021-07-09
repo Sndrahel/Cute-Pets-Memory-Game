@@ -59,9 +59,6 @@ playBtn.addEventListener('click', () => {
 }); // listen for click to close how to play instructions modal
 
 
-playAgainBtn.addEventListener('click', resetGame); // not working
-
-
 // Audio Buttons. not working
 // Function for audio taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js) 
 audio.addEventListener('click', () => {    
@@ -74,6 +71,12 @@ audio.addEventListener('click', () => {
     });
 
 timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
+
+window.onclick = function(event) {
+    if (event.target.id == 'close') {
+        document.getElementById('win-modal').style.display = 'none';
+        }
+    };
 
 }
 
@@ -193,15 +196,13 @@ function winGame() {
 
 
 function winMessage() {
-    winModal.style.display ="block";
+    winModal.style.display = "block";
     totalTime = timeContainer.innerHTML;
     document.getElementById("final-move").innerHTML = moves;
     document.getElementById("total-time").innerHTML = totalTime;
     winSound.play();
-
     resetGame();
 } 
-
 
 // Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
 function shuffle() {
@@ -229,7 +230,7 @@ function resetGame() {
         shuffle();
         shuffleSound.play();
         cards.forEach(card => card.addEventListener('click', flipCard));
-    }, 400);
+    }, 700);
 }
 
 
