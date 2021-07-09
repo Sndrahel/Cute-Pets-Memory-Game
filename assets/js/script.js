@@ -198,7 +198,7 @@ function winMessage() {
     document.getElementById("total-time").innerHTML = totalTime;
     winSound.play();
 
-    closeModal(); //resetGame
+    closeModal(); 
 } 
 
 function closeModal() {
@@ -208,6 +208,11 @@ function closeModal() {
        resetGame();
     });
 }
+
+function playAgain() {
+    winModal.style.display = "none";
+    resetGame();
+}       
 
 // Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
 function shuffle() {
