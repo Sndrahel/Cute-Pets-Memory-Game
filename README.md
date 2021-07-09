@@ -56,7 +56,7 @@ This is a single page website that contains a simple memory game that contains 1
 
 #### Surface: 
 - Minimal interface.
-
+- With a plain and simple layout that allows the user to focus on the game.
 
 ---
 ## Features:
@@ -76,41 +76,41 @@ Below the deck is a reset button and a information button of how to play the gam
 
 ![Score Area](assets/mockups/score_area.png)
 
-- Time counter:
-- Move counter:
-- Mute button:
+- Time counter counts time of how long it takes the user to complete the game. Timer starts when the first card is clicked.
+- Move counter counts the amount of moves it takes the user to complete the game. Counter starts when the first card is clicked.
+- Mute button mute all sounds in the game.
 
 
 #### Game Deck and Cards
 
 ![Game Deck](assets/mockups/game_deck.png)
 
-Game cards is clickable, and turn on click.
-When there´s a match, cards will stay visible and be disabled from click.
-The images on the back
+- Game cards is clickable, and turn on click.
+- When there´s a match, cards will stay visible and be disabled from click.
 
 
 #### Button Area
 
 ![Button Area](assets/mockups/button_area.png)
 
-- Reset Button: Resets the game.
-- How To Play Button: Pops up when pushed and contains information on how to play the game.
+- Reset Button resets the whole game.
+- How To Play Button pops up when clicked and contains information of how to play the game.
 
 
 #### How to play modal
 
 ![How To Play](assets/mockups/how_to_play.png)
 
-- Reset Button: Resets the game.
-- How To Play Button: Pops up when pushed and contains information on how to play the game.
+- Short information of how to play the game.
+- Contains a "Play Game!" button that returns to the game when clicked.
 
 
 ### Game Over / Win Modal
 
 ![Win Modal](assets/mockups/win_modal.png)
 
-- Win modal: Pops up when game is completed
+- Win modal pops up when game is completed.
+- Contains information of the total amount of moves and time it took the user to complete the game.
 - Play Again Button: Resets the game and restarts the game. 
 
 ___
@@ -136,14 +136,16 @@ ___
 - [Am I responsive](http://ami.responsivedesign.is/#) - Was used to generate a mockup for this readme.
 - [Coolors](https://coolors.co/palettes/trending) - For styling the page.
 
+
 ---  
 ## Testing:
 ---
 
 ### Validator Testing:
 
-- HTML [W3C HTML Validation Service](https://validator.w3.org/).
-- CSS [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/). No errors shown.
+- [W3C HTML Validation Service](https://validator.w3.org/) - Check HTML = No errors where found.
+- [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/) - Check CSS = No errors shown.
+- [Beautify Tools](https://beautifytools.com/javascript-validator.php) - Check JS = No errors where found.
 
 ### This project was tested with the following browsers: 
 ---
@@ -151,30 +153,32 @@ ___
 - Laptop MacOS Big Sur (ver 11.4):
   - Google Chrome
   - Safari Browser
+  - Firefox
 
 - Mobile device Huawei P30 Pro:
   - Google Chrome
   - Huawei Browser
 
-- Mobile device IPhone 11
-
-- Tablet Ipad (5:th gen):
+- Mobile device IPhone 11:
   - Safari Browser
 
 #### With each device and browser the following steps were taken:
 - Test if the game card are clickable and behaves as expected.
 - Test if the timer starts at right time and keep track of time. 
-- Test if the move counter count correct amount of moves. 
-- Test if the "How To Play" btn works and trigger a pop up.
-- Test if the "PlayBtn" close the "How To Play" modal.
-- Test if the "ResetBtn" resets the game to start again.
+- Test if the move counter counts correct amount of moves. 
+- Test if the "How To Play Btn" works and trigger a pop up.
+- Test if the "Play Btn" close the "How To Play" modal.
+- Test if the "Reset Btn" resets the game to start again.
 - Test if the "Win Modal" pops up in the end of the game.
-- Test if the "closemodul" and the "Play Again Btn" works as expected.
-- Test if the mute button mutes all game sounds.
+- Test if the "close module" and the "Play Again Btn" works as expected.
+- Test if the "mute Btn" mutes all game sounds.
 
 
 ---
-### Issues:
+### Issues / Unfixed Bugs:
+- Safari Browsers: Don´t support the function of the game, cards don´t flip as expected / or stay flipped - Not Fixed.
+- Move counter: Doesn´t count moves correctly - Not fixed.
+- Mute button: Isn´t working. Code not completed. - Not fixed. 
 ---
 
   
@@ -202,20 +206,20 @@ To run this project locally:
 ---
 
 #### Content:
-- The template and inspiration of this README.md is partly taken from:
 
-- The styling are through out inspired and taken from:
+- [Free Code Camp](https://marina-ferreira.github.io/tutorials/js/memory-game/) - Inspiraton of the code and styling are through out inspired and taken from this tutorial. 
+- [Youtube](https://www.youtube.com/watch?v=ZniVgo8U7ek) - Inspiraton of the code and styling are through out inspired and taken from this tutorial.
+- [Scotch](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) - Inspiration of the code was also taken from this tutorial.
     
 
 #### Media:
-- The Images on this website were taken from:  
+- [Catalyststuff / Freepik](https://www.freepik.com/catalyststuff) - All images for this game is taken cropped from this site.  
 
-- The icons were taken from [FontAwesome](https://fontawesome.com/)
 
 #### Audio:
-[Freesound](https://freesound.org/) - 
+- [Freesound](https://freesound.org/) - All sound are taken from this site.
  
 ---
-## Acknowledgments
+## Acknowledgments:
 
 - Nishant Kumar: my Code Institute mentor who guided me through this process and shared a lot of valuable knowledge.
