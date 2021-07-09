@@ -156,11 +156,11 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    margin: 150px auto;
+    margin: 100px auto;
     border: 0.7em solid #826aed;
     border-radius: 10px;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 80%;
 }
 
 .instructions-inner h2,
@@ -241,11 +241,6 @@ header {
      height: 90%;
      margin-top: 50px;
  }
-/*
- .instructions-inner,
- .modal-inner {
-     margin-top: 50px;
- }*/
  
  .instructions-inner h2,
  .modal-inner h2 {
@@ -294,8 +289,12 @@ header {
 .modal-inner {
      width: 90%;
      height: 80%;
-     margin-top: 30px;
+     margin-top: 70px;
  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
 
 }
 
