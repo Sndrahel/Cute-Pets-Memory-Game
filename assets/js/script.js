@@ -1,3 +1,12 @@
+/**
+ * Purpose: Remove comments pollution
+ * 
+ * Attribution -
+ *      A - 1: Function taken / adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+ *      A - 2: Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/
+ *      A - 3: Function taken / adapted from: https://github.com/sandraisrael/Memory-Game-fend/blob/master/js/app.js
+ */
+
 // Variable Declaration
     const cards = document.querySelectorAll('.card');
     const movesCounter = document.querySelector('.moves-counter');
@@ -31,8 +40,7 @@
     let firstCard, secondCard; // Checks if cards match
     let moves = 0;
     let totalTime = "";
-    let soundOn = true;
-    
+    let soundOn = true;  
 
 // Timer
     let time;
@@ -46,7 +54,7 @@ function init() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
-// Moves Counter and Timer. (Function adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+// Moves Counter and Timer. ( A - 1 ) 
 moves = 0;
 movesCounter.innerHTML = 0;
 
@@ -66,13 +74,14 @@ timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
 
 init();
 
-// Instruction Pop Up. (Function adapted from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+
+// Instruction Pop Up. ( A - 1 )
 function toggleInstructions(withValue) {
     instructions.style.display = withValue;
 }
 
 
-// Click and Flip function for cards. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/) 
+// Click and Flip function for cards. ( A - 2 )
 function flipCard() {
     if (!gameOn) {
         gameOn = true;
@@ -100,7 +109,7 @@ function flipCard() {
 }
 
 
-// Checks if cards match. (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+// Checks if cards match. ( A - 1 )
 function checkIfCardMatch() { 
 
     let isMatch = firstCard.dataset.flipper === secondCard.dataset.flipper;
@@ -113,7 +122,7 @@ function checkIfCardMatch() {
 }
 
 
-// Cards will be disabled for clicks once they are matched. (Function adapted from: https://marina-ferreira.github.io/tutorials/js/memory-game/) 
+// Cards will be disabled for clicks once they are matched. ( A - 2 ) 
 function disableCard() {  
 
     firstCard.removeEventListener('click', flipCard);
@@ -124,7 +133,7 @@ function disableCard() {
 }
 
 
-// Keeps board locked and flips card back if no match 
+// Keeps board locked and flips card back if no match. ( A - 1 / A -2 )
 function noMatch() {
     lockBoard = true;
 
@@ -139,14 +148,14 @@ function noMatch() {
       addMove();
 }
 
-
+// Adds moves to the counter ( A - 2)
 function addMove() {
     moves++;
     movesCounter.innerHTML = moves;
 }
 
 
-// Timer function is called the first time the firstCard is clicked
+// Timer function is called the first time the firstCard is clicked. ( A - 2 / A - 3 )
 function timer() {
         time = setInterval(function() {
             seconds++;
@@ -158,13 +167,13 @@ function timer() {
         }, 1000);
 }
 
-
+// ( A - 2 )
 function finishTime() {
     clearInterval(time);
 } 
 
 
-// Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
+// Cards are reset after each round. ( A - 2 )
 function resetBoard() {
 
     [flippedCard, lockBoard] = [false, false];
@@ -172,13 +181,13 @@ function resetBoard() {
 }
 
 
-// Win game Pop Up message. (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+// Submits functions when game is won. ( A - 1 )
 function winGame() {
     finishTime();
     winMessage();
 }
 
-
+// Pops Up when game is won. ( A - 3 )
 function winMessage() {
     winModal.style.display = "block";
     totalTime = timeContainer.innerHTML;
@@ -189,6 +198,7 @@ function winMessage() {
     closeModal(); 
 } 
 
+// ( A - 3 )
 function closeModal() {
     closeIcon.addEventListener('click', function() {
         winModal.style.display = "none";
@@ -197,21 +207,23 @@ function closeModal() {
     });
 }
 
+// ( A - 3 )
 function playAgain() {
     winModal.style.display = "none";
     resetGame();
 }       
 
-// Cards are reset after each round. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/)
+
+// Cards are reset after each round. ( A - 2 )
 function shuffle() {
     cards.forEach(card => {
       let randomPos = Math.floor(Math.random() * 16);
       card.style.order = randomPos;
     });
-  }
+}
 
 
-// Resets game and starts a new game (Function taken from: https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js)
+// Resets game and starts a new game ( A - 1 )
 function resetGame() {
     setTimeout(() => {
         finishTime();
