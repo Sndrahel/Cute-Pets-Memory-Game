@@ -156,18 +156,25 @@ ___
   - Google Chrome
   - Huawei Browser
 
+- Mobile device IPhone 11
+
 - Tablet Ipad (5:th gen):
   - Safari Browser
 
 #### With each device and browser the following steps were taken:
-- 
--
--
--
+- Test if the game card are clickable and behaves as expected.
+- Test if the timer starts at right time and keep track of time. 
+- Test if the move counter count correct amount of moves. 
+- Test if the "How To Play" btn works and trigger a pop up.
+- Test if the "PlayBtn" close the "How To Play" modal.
+- Test if the "ResetBtn" resets the game to start again.
+- Test if the "Win Modal" pops up in the end of the game.
+- Test if the "closemodul" and the "Play Again Btn" works as expected.
+- Test if the mute button mutes all game sounds.
 
 
 ---
-### Unfixed Bugs:
+### Issues:
 ---
 
   
