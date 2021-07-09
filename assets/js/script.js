@@ -143,7 +143,7 @@ function noMatch() {
         noMatchSound.play();
 
         resetBoard();
-      }, 800); // Used to keep the cards visible for a short time
+      }, 1000); // Used to keep the cards visible for a short time
 
       addMove();
 }
@@ -242,7 +242,7 @@ function resetGame() {
         cards.forEach(card => card.addEventListener('click', flipCard));
         perfectMatch = 0;
         soundOn = true; //Ny
-    }, 500);
+    }, 700);
 }
 
 
