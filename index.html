@@ -32,8 +32,8 @@
                 <h3 class="timer-header">Time: <span class="timer">00:00</span></h3>
             </div>
 
-            <div id="audio-control">
-                <button class="btn" id="mute-btn"><i class="fas fa-volume-mute" ></i></button>
+            <div>
+                <button class="btn" id="mute-btn" onclick="muteAudio()"><i class="fas fa-volume-mute" ></i></button>
             </div>
         </section>
 
@@ -136,8 +136,8 @@
         <section class="instructions-outer" id="instructions">
             <div class="instructions-inner">
                 <h2>How To Play</h2>
-                    <img src="assets/images/cardback.jpg" alt="image of a cat playing">
-                        <p>Find all pairs of matching card as quickly as possible.</p>
+                    <img src="assets/images/Playcat.jpg" alt="image of a cat playing">
+                        <p>Find all pairs of matching cards as quickly as possible.</p>
                         <p>Click on a card to flip it over.</p>
                         <p>Only two cards at a time can be flipped.</p>
                         <p>To start the game, click on the Play button below.</p>
@@ -150,7 +150,7 @@
             <div class="modal-inner">
                 <a class="close-win-modal" href=#>x</a>
                     <h2>Well done!</h2>
-                    <p>You have complete the game.</p>
+                    <p>You have completed the game.</p>
                     <img class="modal-img" src="assets/images/polarbear.jpg" alt="polarbear with medal">
                     <p>You made <span id="final-move"> </span> moves </p>
                     <p>in the time of: <span id="total-time"> </span> </p>    
@@ -159,12 +159,13 @@
         </section>
 
     <!-- Sound Clips -->
-        
-        <audio src="assets/sounds/flipsound.mp3" id="flipSound"></audio>
-        <audio src="assets/sounds/nomatchsound.wav" id="noMatchSound"></audio>
-        <audio src="assets/sounds/matchsound.mp3" id="matchSound"></audio>
-        <audio src="assets/sounds/shuffle.wav" id="shuffleSound"></audio>
-        <audio src="assets/sounds/win.wav" id="winSound"></audio>
+        <div id="audio-control">
+            <audio src="assets/sounds/flipsound.mp3" id="flipSound"></audio>
+            <audio src="assets/sounds/nomatchsound.wav" id="noMatchSound"></audio>
+            <audio src="assets/sounds/matchsound.mp3" id="matchSound"></audio>
+            <audio src="assets/sounds/shuffle.wav" id="shuffleSound"></audio>
+            <audio src="assets/sounds/win.wav" id="winSound"></audio>
+        </div>
 
 
     <script src="assets/js/script.js"></script>  

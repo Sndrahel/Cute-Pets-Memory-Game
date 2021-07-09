@@ -14,7 +14,7 @@
 
 // Audio buttons 
     const muteBtn = document.getElementById('mute-btn');
-    const audio = document.getElementById('audio-control');
+    const audioControl = document.getElementById('audio-control');
 
 // Sound effects 
     const noMatchSound = document.getElementById('noMatchSound');
@@ -32,7 +32,6 @@
     let moves = 0;
     let totalTime = "";
     let soundOn = true;
-
     
 
 // Timer
@@ -61,17 +60,6 @@ playBtn.addEventListener('click', () => {
 }); // listen for click to close how to play instructions modal
 
 
-// Audio Buttons. not working
-// Function for audio taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js) 
-audio.addEventListener('click', () => {    
-    muteBtn.classList.toggle('show');
-    
-        for (let i = 0; i < cardSounds.length; i++) {
-            cardSounds[i].muted = soundOn;            
-        }
-            soundOn = !soundOn;
-    });
-
 timeContainer.innerHTML = `${minutes} Min ${seconds} Sec`;
 
 }
@@ -83,6 +71,23 @@ function toggleInstructions(withValue) {
     instructions.style.display = withValue;
 }
 
+function muteAudio() {
+    if (cardSounds.mute == false) {
+        document.get
+    }
+}
+
+// Audio Buttons. not working
+// Function for audio taken from: https://github.com/kerekmarci/ms2/blob/master/assets/js/game.js) 
+muteBtn.onclick = function() {
+    
+    if (cardSounds.muted === false) {
+        cardSounds.muted = true;
+    } else {
+        cardSounds.muted = false;
+    }
+    }; 
+    
 
 // Click and Flip function for cards. (Function taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/) 
 function flipCard() {
